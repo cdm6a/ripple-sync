@@ -1,0 +1,11 @@
+{
+  "name": "ripple-connect",
+  "version": "1.0.0",
+  "description": "A platform for managing ripple transactions and addresses associated with a particular wallet(s).",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Conner McNamara <conner@ripple.com>",
+  "license": "ISC"
+}
