@@ -7,5 +7,18 @@
     "test": "test"
   },
   "author": "Conner McNamara <conner@ripple.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^2.8.2",
+    "chai": "^1.10.0",
+    "chai-as-promised": "^4.1.1",
+    "lodash": "^2.4.1",
+    "mocha": "^2.1.0",
+    "nconf": "^0.7.1",
+    "path": "^0.11.14",
+    "pg": "^4.2.0",
+    "pg-hstore": "^2.3.1",
+    "require-all-to-camel": "^1.0.0",
+    "sequelize": "^2.0.0-rc8"
+  }
 }

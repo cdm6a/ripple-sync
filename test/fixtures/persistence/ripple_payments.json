@@ -1,0 +1,47 @@
+{
+  "valid" : {
+    "source_account": "rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn",
+    "source_tag": "",
+    "source_amount_value": "0.00001",
+    "source_amount_currency": "XRP",
+    "source_amount_issuer": "",
+    "source_slippage": "0",
+    "destination_account": "ra5nK24KXen9AHvsdFTKHSANinZseWnPcX",
+    "destination_tag": "",
+    "destination_amount_value": "0.0000000508",
+    "destination_amount_currency": "USD",
+    "destination_amount_issuer": "rsP3mgGb2tcYUrxiLFiHJiQXhsziegtwBc",
+    "invoice_id": "",
+    "paths": "[]",
+    "no_direct_ripple": false,
+    "partial_payment": true,
+    "direction": "outgoing",
+    "result": "tesSUCCESS",
+    "timestamp": "2014-09-17T21:47:00.000Z",
+    "fee": "0.00001",
+    "source_balance_changes": [
+      {
+        "currency": "XRP",
+        "value": "-0.00002",
+        "issuer": ""
+      }
+    ],
+    "destination_balance_changes": [
+      {
+        "currency": "USD",
+        "value": "5.08e-8",
+        "issuer": "rsP3mgGb2tcYUrxiLFiHJiQXhsziegtwBc"
+      }
+    ],
+    "destination_amount_submitted": {
+      "currency": "USD",
+      "issuer": "rsP3mgGb2tcYUrxiLFiHJiQXhsziegtwBc",
+      "value": "0.01"
+    },
+    "source_amount_submitted": {
+      "value": "0.00001",
+      "currency": "XRP",
+      "issuer": ""
+    }
+  }
+}

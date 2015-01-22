@@ -1,0 +1,17 @@
+{
+  "test": {
+    "host" : "localhost",
+    "dialect" : "sqlite",
+    "username" : "ripple_connect_user",
+    "password" : "",
+    "database" : "ripple_connect"
+  },
+  "dev": {
+    "host" : "localhost",
+    "port" : "5432",
+    "dialect" : "postgres",
+    "username" : "ripple_connect_user",
+    "password" : "password",
+    "database" : "ripple_connect"
+  }
+}
