@@ -10,15 +10,20 @@
   "license": "ISC",
   "dependencies": {
     "bluebird": "^2.8.2",
+    "body-parser": "^1.10.2",
     "chai": "^1.10.0",
     "chai-as-promised": "^4.1.1",
+    "epilogue": "^0.3.3",
+    "express": "^4.11.1",
     "lodash": "^2.4.1",
+    "logger": "0.0.1",
     "mocha": "^2.1.0",
     "nconf": "^0.7.1",
     "path": "^0.11.14",
     "pg": "^4.2.0",
     "pg-hstore": "^2.3.1",
     "require-all-to-camel": "^1.0.0",
-    "sequelize": "^2.0.0-rc8"
+    "sequelize": "^2.0.0-rc8",
+    "winston": "^0.8.3"
   }
 }
