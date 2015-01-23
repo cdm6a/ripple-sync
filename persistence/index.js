@@ -18,5 +18,6 @@ var sequelize = new Sequelize(database, username, password, {
 
 // Add Model declarations here
 sequelize.models.ripplePayments = sequelize.import(__dirname + '/models/ripple_payments');
+sequelize.models.managedAddresses = sequelize.import(__dirname + '/models/managed_addresses');
 
 module.exports = sequelize;

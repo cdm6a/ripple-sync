@@ -1,10 +1,10 @@
-var express        = require('express');
-var bodyParser     = require('body-parser');
-var resourceRouter = require(__dirname + '/routers/resources_router.js');
+var express    = require('express');
+var bodyParser = require('body-parser');
+var router     = require(__dirname + '/router.js');
 
 var app = express();
 app.use(bodyParser.json());
 
-app.use('/', resourceRouter);
+app.use('/', router);
 
 module.exports = app;
