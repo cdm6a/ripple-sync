@@ -1,21 +1,21 @@
 var _                       = require('lodash');
 var responseHandler         = require(__dirname + '/../response_handler.js');
-var managedAddressesService = require(__dirname + '/../../lib/services/managed_addresses_service.js');
+var rippleAddressesService  = require(__dirname + '/../../lib/services/ripple_addresses_service.js');
 var logger                  = require(__dirname + '/../../logger.js');
 
 function find(request, response) {
-  managedAddressesService.find(request.query)
-    .then(function(managedAddresses) {
-      responseHandler.success(response, {managed_addresses: managedAddresses});
+  rippleAddressesService.find(request.query)
+    .then(function(rippleAddresses) {
+      responseHandler.success(response, {ripple_addresses: rippleAddresses});
     }).error(function(error) {
       responseHandler.internalError(response, null, error);
     });
 }
 
 function findById(request, response) {
-  managedAddressesService.find(request.param.id)
-    .then(function(managedAddress) {
-      responseHandler.success(response, {managed_address: managedAddress});
+  rippleAddressesService.find(request.param.id)
+    .then(function(rippleAddress) {
+      responseHandler.success(response, {ripple_address: rippleAddress});
     }).error(function(error) {
       responseHandler.internalError(response, null, error);
     });

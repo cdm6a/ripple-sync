@@ -11,6 +11,11 @@ nconf.argv()
      .env()
      .file({ file: __dirname + '/config.json' });
 
+// If NODE_ENV is not set, default to dev
+if (!nconf.get('NODE_ENV')) {
+  nconf.set('NODE_ENV', 'dev');
+}
+
 //
 // Setup NODE_ENV specific database variables
 //

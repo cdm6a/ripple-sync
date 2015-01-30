@@ -1,6 +1,6 @@
 
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('managed_addresses', {
+  return sequelize.define('ripple_addresses', {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -9,11 +9,14 @@ module.exports = function(sequelize, DataTypes) {
     address: {
       type: DataTypes.STRING
     },
+    secret: {
+      type: DataTypes.STRING
+    },
     last_transaction_hash: {
       type: DataTypes.STRING
     }
   }, {
-    tableName: 'managed_addresses',
+    tableName: 'ripple_addresses',
     updatedAt: 'updated_at',
     createdAt: 'created_at'
   });
