@@ -13,7 +13,7 @@ function find(request, response) {
 }
 
 function findById(request, response) {
-  ripplePaymentsService.find(request.param.id)
+  ripplePaymentsService.find(request.params.id)
     .then(function(ripplePayment) {
       responseHandler.success(response, {ripple_payment: ripplePayment});
     }).error(function(error) {

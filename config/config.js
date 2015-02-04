@@ -21,8 +21,8 @@ if (!nconf.get('NODE_ENV')) {
 //
 nconf.set('database:host', databaseConfig[nconf.get('NODE_ENV')].host);
 nconf.set('database:port', databaseConfig[nconf.get('NODE_ENV')].port);
-nconf.set('database:dialect', databaseConfig[nconf.get('NODE_ENV')].dialect);
-nconf.set('database:username', databaseConfig[nconf.get('NODE_ENV')].username);
+nconf.set('database:client', databaseConfig[nconf.get('NODE_ENV')].client);
+nconf.set('database:user', databaseConfig[nconf.get('NODE_ENV')].user);
 nconf.set('database:password', databaseConfig[nconf.get('NODE_ENV')].password);
 nconf.set('database:database', databaseConfig[nconf.get('NODE_ENV')].database);
 

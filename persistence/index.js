@@ -1,23 +1,21 @@
-var Sequelize  = require('sequelize');
-var requireAll = require('require-all-to-camel');
-var models     = requireAll(__dirname + '/models');
 var config     = require(__dirname + '/../config/config.js');
 
-const database = config.get('database:database');
-const username = config.get('database:username');
-const password = config.get('database:password');
-const dialect  = config.get('database:dialect');
+const client  = config.get('database:client');
 const host     = config.get('database:host');
-const port     = config.get('database:port');
+const user     = config.get('database:user');
+const password = config.get('database:password');
+const database   = config.get('database:database');
 
-var sequelize = new Sequelize(database, username, password, {
-  dialect: dialect,
-  host: host,
-  port: port
+var knex = require('knex')({
+  client: client,
+  connection: {
+    host     : host,
+    user     : user,
+    password : password,
+    database : database
+  }
 });
 
-// Add Model declarations here
-sequelize.models.ripplePayments = sequelize.import(__dirname + '/models/ripple_payments');
-sequelize.models.rippleAddresses = sequelize.import(__dirname + '/models/ripple_addresses');
+var bookshelf = require('bookshelf')(knex);
 
-module.exports = sequelize;
+module.exports = bookshelf;

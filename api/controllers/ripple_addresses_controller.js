@@ -1,7 +1,6 @@
 var _                       = require('lodash');
 var responseHandler         = require(__dirname + '/../response_handler.js');
 var rippleAddressesService  = require(__dirname + '/../../lib/services/ripple_addresses_service.js');
-var logger                  = require(__dirname + '/../../logger.js');
 
 function find(request, response) {
   rippleAddressesService.find(request.query)
@@ -13,7 +12,7 @@ function find(request, response) {
 }
 
 function findById(request, response) {
-  rippleAddressesService.find(request.param.id)
+  rippleAddressesService.findById(request.params.id)
     .then(function(rippleAddress) {
       responseHandler.success(response, {ripple_address: rippleAddress});
     }).error(function(error) {
