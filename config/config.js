@@ -26,4 +26,7 @@ nconf.set('database:user', databaseConfig[nconf.get('NODE_ENV')].user);
 nconf.set('database:password', databaseConfig[nconf.get('NODE_ENV')].password);
 nconf.set('database:database', databaseConfig[nconf.get('NODE_ENV')].database);
 
+// Set Ripple Rest host without ending /
+nconf.set('rippleRestHost', 'http://localhost:5990');
+
 module.exports = nconf;
